@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<listeners>
+		<listener class-name="io.stage.imerit.utilities.ExtentReport"></listener>
+	</listeners>
+	<test name="Test">
+		<classes>
+			<class name="io.stage.imerit.tests.AdminLogin" />
+			<!--class name="io.stage.imerit.tests.Organizations" /-->
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
