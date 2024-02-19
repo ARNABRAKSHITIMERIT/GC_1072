@@ -40,8 +40,10 @@ public class AdminLogin extends BaseClass {
 	public void verifyEmailPasswordEntry() throws InterruptedException, IOException {
 		LoginPage loginPage = new LoginPage(driver);
 
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"password\"]/div[1]/div/div[1]/input")));
+		Thread.sleep(10000) ;
+
+		//WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+		//wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"password\"]/div[1]/div/div[1]/input")));
 
 		loginPage.enterEmailPassword("Dhoni@7610");
 	}
