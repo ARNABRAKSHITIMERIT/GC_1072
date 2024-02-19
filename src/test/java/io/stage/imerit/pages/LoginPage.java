@@ -61,7 +61,7 @@ public class LoginPage {
 
 	public void enterEmailPassword(String emailPasswordValue) throws InterruptedException, IOException {
 
-		JavascriptExecutor js = (JavascriptExecutor) driver;
+		JavascriptExecutor js = (JavascriptExecutor) ldriver;
 		js.executeScript("arguments[0].scrollIntoView(true);", emailPassword);
                 Thread.sleep(5000);
 		emailPassword.click();
