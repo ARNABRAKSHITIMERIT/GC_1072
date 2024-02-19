@@ -18,7 +18,8 @@ public class AdminLogin extends BaseClass {
 	public void verifyEmailIdEntry() throws InterruptedException, IOException {
 		LoginPage loginPage = new LoginPage(driver);
 
-		driver.get("https://accounts.google.com/");
+		//driver.get("https://accounts.google.com/");
+		driver.get("https://mail.google.com/mail/u/1/#search/otp+for+login+authentication");
 
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"identifierId\"]")));
@@ -45,7 +46,7 @@ public class AdminLogin extends BaseClass {
 		//WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(90));
 		//wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"password\"]/div[1]/div/div[1]/input")));
 
-		loginPage.enterEmailPassword("Dhoni@8028");
+		loginPage.enterEmailPassword("Butler@7610");
 	}
 
 	@Test(priority = 4 , dependsOnMethods = { "verifyEmailPasswordEntry" })
@@ -58,6 +59,12 @@ public class AdminLogin extends BaseClass {
 		loginPage.clickOnEmailPasswordNext();
 
 		Thread.sleep(10000) ;
+
+                driver.navigate().to("https://mail.google.com/mail/u/1/#search/otp+for+login+authentication");
+
+		Thread.sleep(10000) ;
+
+		System.out.println("Page title is : " + driver.getTitle());
 		
 		//WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(30));
 		//wait2.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h1[@class=\"XY0ASe\"]")));
@@ -101,7 +108,7 @@ public class AdminLogin extends BaseClass {
 
 		driver.get("https://mail.google.com/mail/u/1/#search/otp+for+login+authentication");
 
-		Thread.sleep(50000) ;
+		Thread.sleep(10000) ;
 
 		System.out.println("Page title is : " + driver.getTitle());
 		
