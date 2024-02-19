@@ -36,7 +36,7 @@ public class BaseClass {
 
 		case "chrome":
 			
-			FileUtils.forceDelete(new File(".\\allure-results"));
+			//FileUtils.forceDelete(new File(".\\allure-results"));
 			
 			ChromeOptions opt = new ChromeOptions();
 			
