@@ -78,8 +78,15 @@ public class AdminLogin extends BaseClass {
 		
 		System.out.println("Page title is : " + driver.getTitle());
 
-		driver.findElement(By.xpath("//*[@data-email='arnabrakshit_test1@imerit.net']")).click();
+		loginPage.enterEmailId("arnabrakshit_test1@imerit.net");
+		Thread.sleep(10000) ;
+		loginPage.clickOnEmailIdNext();
+		Thread.sleep(10000) ;
+		loginPage.enterEmailPassword("Modi@7610");
+		Thread.sleep(10000) ;
+		loginPage.clickOnEmailPasswordNext();
 
+		
 		Thread.sleep(10000) ;
 		
 		System.out.println("Page title is : " + driver.getTitle());
