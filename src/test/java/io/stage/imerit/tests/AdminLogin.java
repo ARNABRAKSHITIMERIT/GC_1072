@@ -45,7 +45,7 @@ public class AdminLogin extends BaseClass {
 		//WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(90));
 		//wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"password\"]/div[1]/div/div[1]/input")));
 
-		loginPage.enterEmailPassword("Dhoni@7610");
+		loginPage.enterEmailPassword("Dhoni@8028");
 	}
 
 	@Test(priority = 4, dependsOnMethods = { "verifyEmailPasswordEntry" })
