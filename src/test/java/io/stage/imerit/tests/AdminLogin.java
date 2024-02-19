@@ -18,7 +18,7 @@ public class AdminLogin extends BaseClass {
 	public void verifyEmailIdEntry() throws InterruptedException, IOException {
 		LoginPage loginPage = new LoginPage(driver);
 
-		driver.get("https://accounts.google.com/");
+		driver.get("https://mail.google.com/");
 		//driver.get("https://mail.google.com/mail/u/1/#search/otp+for+login+authentication");
 
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
