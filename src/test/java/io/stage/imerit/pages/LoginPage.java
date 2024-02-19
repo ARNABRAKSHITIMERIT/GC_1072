@@ -9,6 +9,8 @@ import org.openqa.selenium.support.PageFactory;
 import java.io.IOException;
 import java.time.Duration;
 
+import org.openqa.selenium.JavascriptExecutor;
+
 public class LoginPage {
 	WebDriver ldriver;
 
@@ -59,7 +61,8 @@ public class LoginPage {
 
 	public void enterEmailPassword(String emailPasswordValue) throws InterruptedException, IOException {
 
-		((JavascriptExecutor) ldriver).executeScript("arguments[0].scrollIntoView(true);", emailPassword);
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].scrollIntoView(true);", emailPassword);
                 Thread.sleep(5000);
 		emailPassword.click();
 		Thread.sleep(5000);
