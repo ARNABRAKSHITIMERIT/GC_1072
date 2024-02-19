@@ -6,6 +6,9 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.io.IOException;
+import java.time.Duration;
+
 public class LoginPage {
 	WebDriver ldriver;
 
@@ -54,8 +57,9 @@ public class LoginPage {
 		actions.moveToElement(emailIdNextButton).click().perform();
 	}
 
-	public void enterEmailPassword(String emailPasswordValue) {
+	public void enterEmailPassword(String emailPasswordValue) throws InterruptedException, IOException {
 		emailPassword.click();
+		Thread.sleep(5000);
 		emailPassword.sendKeys(emailPasswordValue);
 	}
 
