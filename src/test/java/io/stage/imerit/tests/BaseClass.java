@@ -53,7 +53,7 @@ public class BaseClass {
 			opt.addArguments("--allow-insecure-localhost");
 			opt.addArguments("--allow-running-insecure-content");
 			opt.addArguments("--disable-dev-shm-usage");
-			opt.addArguments("--disable-dev-shm-usage");
+			opt.addArguments("--disable-web-security");
 			opt.addArguments("--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36");
 			
 			//WebDriverManager.chromedriver().setup();
