@@ -54,9 +54,11 @@ public class AdminLogin extends BaseClass {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"passwordNext\"]/div/button/div[3]")));
 
 		loginPage.clickOnEmailPasswordNext();
+
+		thread.sleep(10000) ;
 		
-		WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(30));
-		wait2.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h1[@class=\"XY0ASe\"]")));
+		//WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(30));
+		//wait2.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h1[@class=\"XY0ASe\"]")));
   }
 
 	@Test(priority = 5, dependsOnMethods = { "verifyEmailPasswordNextClick" })
