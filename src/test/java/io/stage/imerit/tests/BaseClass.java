@@ -54,11 +54,16 @@ public class BaseClass {
 			opt.addArguments("--allow-running-insecure-content");
 			opt.addArguments("--disable-dev-shm-usage");
 			opt.addArguments("--disable-web-security");
+			opt.addArguments("--incognito");
+			opt.addArguments("--disable-popup-blocking");
+			opt.addArguments("--disable-infobars");
+			opt.addArguments("--start-maximized");
 			opt.addArguments("--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36");
 			
 			//WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver(opt);
 			driver.manage().window().maximize();
+			driver.manage().deleteAllCookies();
 			
 		    Thread.sleep(2000);
 			
@@ -70,7 +75,8 @@ public class BaseClass {
 					driver.switchTo().window(actual);
 				}
 			}
-			
+
+					driver.manage().window().maximize();
 	    	break;
 
 		case "msedge":
