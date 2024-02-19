@@ -35,16 +35,16 @@ public class AdminLogin extends BaseClass {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"identifierNext\"]/div/button/div[3]")));
 
 		loginPage.clickOnEmailIdNext();
+
+		Thread.sleep(10000) ;
 	}
 
 	@Test(priority = 3 , dependsOnMethods = { "verifyEmailIdNextClick" })
 	public void verifyEmailPasswordEntry() throws InterruptedException, IOException {
 		LoginPage loginPage = new LoginPage(driver);
 
-		Thread.sleep(10000) ;
-
-		//WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(90));
-		//wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"password\"]/div[1]/div/div[1]/input")));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(90));
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"password\"]/div[1]/div/div[1]/input")));
 
 		loginPage.enterEmailPassword("Butler@7610");
 	}
