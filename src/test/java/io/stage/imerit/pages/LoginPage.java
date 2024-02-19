@@ -35,7 +35,8 @@ public class LoginPage {
 	@FindBy(xpath = "//button[@type='submit']")
 	WebElement dashboardSignInButton;
 
-	@FindBy(xpath = "(//table[1]/tbody[1]/tr[1]/td[5]/div[1]/div[1]/span[1])[1]")
+	//@FindBy(xpath = "(//table[1]/tbody[1]/tr[1]/td[5]/div[1]/div[1]/span[1])[1]")
+	@FindBy(xpath = "//span[@class='y2']")
 	WebElement emailOtpText;
 
 	@FindBy(xpath = "//input[@id='otp']")
