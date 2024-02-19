@@ -45,7 +45,7 @@ public class BaseClass {
 			
 			opt.addExtensions(new File(".\\src\\test\\resource\\idnmojbcdinkcmmlaoomomcehpcklgpf.crx"));
 			
-			//opt.addArguments("--headless=new");
+			opt.addArguments("--headless=new");
 			opt.addArguments("--disable-gpu");
 			opt.addArguments("--window-size=1920,1200");
 			opt.addArguments("--ignore-certificate-errors");
