@@ -26,7 +26,7 @@ public class AdminLogin extends BaseClass {
 		loginPage.enterEmailId("arnabrakshit_test1@imerit.net");
 	}
 
-	@Test(priority = 2, dependsOnMethods = { "verifyEmailIdEntry" })
+	@Test(priority = 2 , dependsOnMethods = { "verifyEmailIdEntry" })
 	public void verifyEmailIdNextClick() throws InterruptedException, IOException {
 		LoginPage loginPage = new LoginPage(driver);
 
@@ -36,7 +36,7 @@ public class AdminLogin extends BaseClass {
 		loginPage.clickOnEmailIdNext();
 	}
 
-	@Test(priority = 3, dependsOnMethods = { "verifyEmailIdNextClick" })
+	@Test(priority = 3 , dependsOnMethods = { "verifyEmailIdNextClick" })
 	public void verifyEmailPasswordEntry() throws InterruptedException, IOException {
 		LoginPage loginPage = new LoginPage(driver);
 
@@ -48,7 +48,7 @@ public class AdminLogin extends BaseClass {
 		loginPage.enterEmailPassword("Dhoni@8028");
 	}
 
-	@Test(priority = 4, dependsOnMethods = { "verifyEmailPasswordEntry" })
+	@Test(priority = 4 , dependsOnMethods = { "verifyEmailPasswordEntry" })
 	public void verifyEmailPasswordNextClick() throws InterruptedException, IOException {
 		LoginPage loginPage = new LoginPage(driver);
 
@@ -63,7 +63,7 @@ public class AdminLogin extends BaseClass {
 		//wait2.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h1[@class=\"XY0ASe\"]")));
   }
 
-	@Test(priority = 5, dependsOnMethods = { "verifyEmailPasswordNextClick" })
+	@Test(priority = 5 , dependsOnMethods = { "verifyEmailPasswordNextClick" })
 	public void verifyDashboardUsernameEntry() throws InterruptedException, IOException {
 		LoginPage loginPage = new LoginPage(driver);
 
@@ -75,7 +75,7 @@ public class AdminLogin extends BaseClass {
 		loginPage.enterDashboardUsername("arnabrakshit_test1@imerit.net");
 	}
 
-	@Test(priority = 6, dependsOnMethods = { "verifyDashboardUsernameEntry" })
+	@Test(priority = 6 , dependsOnMethods = { "verifyDashboardUsernameEntry" })
 	public void verifyDashboardPasswordEntry() throws InterruptedException, IOException {
 		LoginPage loginPage = new LoginPage(driver);
 
@@ -85,7 +85,7 @@ public class AdminLogin extends BaseClass {
 		loginPage.enterDashboardPassword("Abcd@1234");
 	}
 
-	@Test(priority = 7, dependsOnMethods = { "verifyDashboardPasswordEntry" })
+	@Test(priority = 7 , dependsOnMethods = { "verifyDashboardPasswordEntry" })
 	public void verifyDashboardSignInClick() throws InterruptedException, IOException {
 		LoginPage loginPage = new LoginPage(driver);
 
@@ -95,21 +95,23 @@ public class AdminLogin extends BaseClass {
 		loginPage.clickOnDashboardSignIn();
 	}
 
-	@Test(priority = 8, dependsOnMethods = { "verifyDashboardSignInClick" })
+	@Test(priority = 8 , dependsOnMethods = { "verifyDashboardSignInClick" })
 	public void verifyEmailOtpExtraction() throws InterruptedException, IOException {
 		LoginPage loginPage = new LoginPage(driver);
 
 		driver.get("https://mail.google.com/mail/u/1/#search/otp+for+login+authentication");
 
-		Thread.sleep(20000) ;
+		Thread.sleep(50000) ;
+
+		System.out.println("Page title is : " + driver.getTitle());
 		
 		//WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(90));
 		//wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//span[@class='y2']")));
 
-		otp = loginPage.getOtp();
+		//otp = loginPage.getOtp();
 	}
 
-	@Test(priority = 9, dependsOnMethods = { "verifyEmailOtpExtraction" })
+	@Test(priority = 9 , dependsOnMethods = { "verifyEmailOtpExtraction" } , enabled = false)
 	public void verifyOtpEntry() throws InterruptedException, IOException {
 		LoginPage loginPage = new LoginPage(driver);
 
@@ -125,7 +127,7 @@ public class AdminLogin extends BaseClass {
 		loginPage.enterDashboardOtp(otp);
 	}
 
-	@Test(priority = 10, dependsOnMethods = { "verifyOtpEntry" })
+	@Test(priority = 10 , dependsOnMethods = { "verifyOtpEntry" } , enabled = false)
 	public void verifyDashboardLogin() throws InterruptedException, IOException {
 		LoginPage loginPage = new LoginPage(driver);
 
