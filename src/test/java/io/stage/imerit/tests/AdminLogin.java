@@ -72,7 +72,7 @@ public class AdminLogin extends BaseClass {
 
 		System.out.println("Page title is : " + driver.getTitle());
 
-		driver.findElement(By.xpath("//a[@data-action='sign in']")).click();
+		//driver.findElement(By.xpath("//a[@data-action='sign in']")).click();
 
 		Thread.sleep(10000) ;
 		
