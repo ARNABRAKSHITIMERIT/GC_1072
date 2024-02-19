@@ -55,7 +55,7 @@ public class AdminLogin extends BaseClass {
 
 		loginPage.clickOnEmailPasswordNext();
 
-		thread.sleep(10000) ;
+		Thread.sleep(10000) ;
 		
 		//WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(30));
 		//wait2.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h1[@class=\"XY0ASe\"]")));
