@@ -101,8 +101,8 @@ public class AdminLogin extends BaseClass {
 
 		driver.get("https://mail.google.com/mail/u/1/#search/otp+for+login+authentication");
 		
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//table[1]/tbody[1]/tr[1]/td[5]/div[1]/div[1]/span[1])[1]")));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(90));
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("(//table[1]/tbody[1]/tr[1]/td[5]/div[1]/div[1]/span[1])[1]")));
 
 		otp = loginPage.getOtp();
 	}
