@@ -20,7 +20,7 @@ public class LoginPage {
 	@FindBy(xpath = "//*[@id=\"identifierNext\"]/div/button/div[3]")
 	WebElement emailIdNextButton;
 
-	@FindBy(xpath = "//*[@id=\"password\"]/div[1]/div/div[1]/input")
+	@FindBy(xpath = "//input[@type='password']")
 	WebElement emailPassword;
 
 	@FindBy(xpath = "//*[@id=\"passwordNext\"]/div/button/div[3]")
@@ -55,7 +55,7 @@ public class LoginPage {
 	}
 
 	public void enterEmailPassword(String emailPasswordValue) {
-		emailPassword.click();
+		//emailPassword.click();
 		emailPassword.sendKeys(emailPasswordValue);
 	}
 
