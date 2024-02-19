@@ -71,6 +71,12 @@ public class AdminLogin extends BaseClass {
 		Thread.sleep(10000) ;
 
 		System.out.println("Page title is : " + driver.getTitle());
+
+		driver.findElement(By.xpath("//a[@data-action='sign in']")).click();
+
+		Thread.sleep(10000) ;
+		
+		System.out.println("Page title is : " + driver.getTitle()
 		
 		//WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(30));
 		//wait2.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h1[@class=\"XY0ASe\"]")));
