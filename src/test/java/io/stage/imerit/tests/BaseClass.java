@@ -40,12 +40,12 @@ public class BaseClass {
 			
 			ChromeOptions opt = new ChromeOptions();
 			
-			opt.setBrowserVersion("114");
+			opt.setBrowserVersion("121");
 			opt.setAcceptInsecureCerts(true);
 			
 			opt.addExtensions(new File(".\\src\\test\\resource\\idnmojbcdinkcmmlaoomomcehpcklgpf.crx"));
 			
-			//opt.addArguments("--headless=new");
+			opt.addArguments("--headless=new");
 			opt.addArguments("--disable-gpu");
 			opt.addArguments("--window-size=1920,1200");
 			opt.addArguments("--ignore-certificate-errors");
