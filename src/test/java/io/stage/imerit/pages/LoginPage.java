@@ -55,7 +55,7 @@ public class LoginPage {
 	}
 
 	public void enterEmailPassword(String emailPasswordValue) {
-		//emailPassword.click();
+		emailPassword.click();
 		emailPassword.sendKeys(emailPasswordValue);
 	}
 
