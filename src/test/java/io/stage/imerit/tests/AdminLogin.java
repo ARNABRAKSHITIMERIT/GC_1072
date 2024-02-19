@@ -62,7 +62,11 @@ public class AdminLogin extends BaseClass {
 
 		Thread.sleep(10000) ;
 
-                driver.navigate().to("https://mail.google.com/mail/u/1/#search/otp+for+login+authentication");
+		System.out.println("Page title is : " + driver.getTitle());
+
+		Thread.sleep(10000) ;
+
+                driver.navigate().to("https://mail.google.com/mail/u/0/#inbox");
 
 		Thread.sleep(10000) ;
 
